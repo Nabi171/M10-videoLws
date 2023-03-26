@@ -1,7 +1,12 @@
 import { useSelector } from "react-redux";
-import VideoItem from "./VideoItem";
 import { selectFilter } from "../features/filters/filterSelectors";
-import { selectAllVideos, selectWatchedVideos, selectUnWatchedVideos } from "../features/videos/videoSelector";
+import {
+    selectAllVideos,
+    selectUnWatchedVideos,
+    selectWatchedVideos,
+} from "../features/videos/videoSelectors";
+import VideoItem from "./VideoItem";
+
 export default function AllVideos() {
     const filter = useSelector(selectFilter);
 
