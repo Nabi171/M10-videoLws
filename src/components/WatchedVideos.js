@@ -3,7 +3,9 @@ import VideoItem from "./VideoItem";
 
 export default function WatchedVideos() {
     const watchedVideos = useSelector((state) =>
-        state.videos.videos.filter((v) => v.watched)
+        state.videos.videos.filter((v) => v.watched), (prev, next) => {
+            return true;
+        }
     );
 
     console.log("[WatchedVideos] renders");
