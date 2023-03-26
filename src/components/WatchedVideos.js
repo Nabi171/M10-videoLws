@@ -1,11 +1,9 @@
-import { useSelector } from "react-redux";
+import { useSelector, shallowEqual } from "react-redux";
 import VideoItem from "./VideoItem";
 
 export default function WatchedVideos() {
     const watchedVideos = useSelector((state) =>
-        state.videos.videos.filter((v) => v.watched), (prev, next) => {
-            return true;
-        }
+        state.videos.videos.filter((v) => v.watched), shallowEqual
     );
 
     console.log("[WatchedVideos] renders");
