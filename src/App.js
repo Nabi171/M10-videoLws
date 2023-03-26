@@ -2,7 +2,8 @@ import React from "react";
 import AddVideo from "./components/AddVideo";
 import AllVideos from "./components/Allvideos";
 import Filters from "./components/Filters";
-import WatchedVideos from "./components/WatchedVideos";
+// import WatchedVideos from "./components/WatchedVideos";
+import UnwatchedVideo from "./components/UnwatchedVideo";
 
 function App() {
     return (
@@ -20,7 +21,7 @@ function App() {
                     <div className="border-b py-2 border-slate-400">
                         <span className="font-bold">Watched Videos</span>
                     </div>
-                    <WatchedVideos />
+                    <UnwatchedVideo />
                 </div>
             </div>
         </div>
