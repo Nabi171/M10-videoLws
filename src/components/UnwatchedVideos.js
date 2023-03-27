@@ -1,12 +1,13 @@
-import { useSelector } from "react-redux";
-import { selectMemoizedUnWatchedVideos, selectMemoizedFilteredVideos } from "../features/videos/videoSelectors";
-import VideoItem from "./VideoItem";
 import { useMemo } from "react";
+import { useSelector } from "react-redux";
+import { selectMemoizedFilteredVideos } from "../features/videos/videoSelectors";
+import VideoItem from "./VideoItem";
 
 export default function UnWatchedVideos() {
-    const selectUnWatchedVideos = useMemo(selectMemoizedFilteredVideos, [])
+    const selectUnWatchedVideos = useMemo(selectMemoizedFilteredVideos, []);
+
     const unwatchedVideos = useSelector((state) =>
-        selectMemoizedFilteredVideos(state, false)
+        selectUnWatchedVideos(state, false)
     );
 
     console.log("[UnWatchedVideos] renders");
