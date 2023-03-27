@@ -21,7 +21,7 @@ export const selectMemoizedUnWatchedVideos = createSelector(
     }
 );
 
-export const selectMemoizedFilteredVideos = createSelector(
+export const selectMemoizedFilteredVideos = () => createSelector(
     selectAllVideos,
     (state, filter) => filter,
     (allVideos, filter) => {
